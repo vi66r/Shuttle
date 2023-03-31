@@ -2,7 +2,7 @@
 
 Shuttle is a nano-library designed to act mostly as syntactic sugar for certain concurrency features within Swift. 
 
-Namely, it takes `Combine` and adapts it's concepts of publishers into "Events" for the sake of readability and just overall speed. It also introduces a series of typealiases that represent generic closures, allowing you to more easily treat functions as a type, and pass them around with relative freedom.
+Namely, it takes `Combine` and adapts it's concepts of publishers into "Events" for the sake of readability and quality of life. It also introduces a series of typealiases that represent generic closures, allowing you to more easily treat functions as a type, and pass them around with relative freedom.
 
 The following is a series of examples on how you might leverage the contents of this library.  
 
@@ -90,7 +90,7 @@ There's also the `@Delayed` wrapper which performs some `Action` with a delay on
 action()
 
 @Delayed2(500, thread: .global(qos: .background)) var backgroundAction = {
-print("do something")
+    print("do something")
 }
 backgroundAction()
 ```
