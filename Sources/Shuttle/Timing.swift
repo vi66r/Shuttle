@@ -23,11 +23,11 @@ public struct Delayed {
     }
 }
 
-func repeatedlyPerform(_ action: @escaping Action,
-                              every delay: Int,
-                              until predicate: @escaping (() -> Bool) = { false }) {
-    let timer = Timer.scheduledTimer(withTimeInterval: TimeInterval(delay), repeats: true) { timer in
-        action()
-        if predicate() { timer.invalidate() }
-    }
-}
+//func repeatedlyPerform(_ action: @escaping Action,
+//                              every delay: Int,
+//                              until predicate: @escaping (() -> Bool) = { false }) {
+//    let timer = Timer.scheduledTimer(withTimeInterval: TimeInterval(delay), repeats: true) { timer in
+//        action()
+//        if predicate() { timer.invalidate() }
+//    }
+//}

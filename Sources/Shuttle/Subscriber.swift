@@ -6,7 +6,7 @@ public protocol Subscribing {
     var prefersMainThreadExecution: Bool { get }
 }
 
-public extension Subscribing {
+public extension Subscribing where Self: AnyObject {
     mutating func subscribe<T>(to subject: ObservableEvent<T>, performing action: @escaping ((T) -> Void)) {
         if prefersMainThreadExecution {
             subscribeOnMain(to: subject, performing: action)
